@@ -1,0 +1,60 @@
+{
+    "go_gym": {
+        "patterns": [
+            "working out",
+            "work out",
+            "work out now please",
+            "gym please",
+            "I want to go gym",
+            "I want to go working out",
+            "I want to work out",
+            "information about gym",
+            "can I work out",
+            "go for work out",
+            "I want to go gym",
+            "gym"
+        ]
+    },
+    "go_swim": {
+        "patterns": [
+            "I want to go for a swim",
+            "go swimming",
+            "swim now",
+            "swim now please",
+            "I want to swim",
+            "Can I swim here",
+            "information about swimming",
+            "info on swimming",
+            "swim information",
+            "swimming"
+        ]
+    },
+    "speak_to_human": {
+        "patterns": [
+            "talk to human",
+            "speak to human",
+            "I want to talk to a human",
+            "I want to speak to a human",
+            "human please",
+            "human now",
+            "human now please",
+            "real person now",
+            "speak to real person",
+            "talk to real person",
+            "I want to talk to a real person"
+        ]
+    },
+    "greeting": {
+        "patterns": [
+            "Hi",
+            "Hey",
+            "How are you",
+            "Is anyone there?",
+            "Hello",
+            "Good day"
+        ]
+    },
+    "goodbye": {
+        "patterns": ["Bye", "See you later", "Goodbye"]
+    }
+}
