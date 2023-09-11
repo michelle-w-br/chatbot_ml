@@ -1,4 +1,4 @@
-# Implementation of chatbot (botpress/voiceflow) intention using machine learning models in PyTorch.  
+# Chatbot intention classification in PyTorch.  
 
 ## v1.0
 Classify simple intention patterns specified by users, with Bag-of-Words model and a simple layer neural network model
