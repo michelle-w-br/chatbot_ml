@@ -18,8 +18,9 @@ BATCH_SIZE = 64  # batch size for training
 total_accu = None
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# load json data
+print("----------- step 1: load json dataset...")
 def load_json(file_name):
-    # load json data
     with open(file_name, 'r') as f:
         doc=json.load(f)
 
@@ -42,18 +43,22 @@ def load_json(file_name):
 train_x,train_y,labels = load_json("./dataset/snips_train.json")
 valid_x,valid_y,_ = load_json("./dataset/snips_valid.json")
 test_x,test_y,_ = load_json("./dataset/snips_test.json")
-print(len(train_x))
-print(len(train_y))
+print("train dataset size:", len(train_x))
+print("valid dataset size:", len(valid_x))
+print("test dataset size:", len(test_x))
 
+print("----------- step 2: preparing dataset iterator...")
 train_iter = ChatDataset(train_x,train_y)
 valid_iter = ChatDataset(valid_x,valid_y)
 test_iter = ChatDataset(test_x,test_y)
 
 #tokenzier and vacoab
+print("----------- step 3: get vocab and tokenizer...")
 vocab,tokenizer = chat_vocab_tokenizer(train_iter)
 print(vocab(['here', 'is', 'an', 'example']))
 
 #dataloader
+print("----------- step 4: lodading dataset...")
 text_pipeline = lambda x: vocab(tokenizer(x))
 
 def collate_batch(batch):
@@ -82,6 +87,7 @@ test_dataloader = DataLoader(
 )
 
 #define model
+print("----------- step 5: preparing model...")
 num_class = len(set([label for (label, text) in train_iter]))
 vocab_size = len(vocab)
 emsize = 64
@@ -90,7 +96,8 @@ criterion = torch.nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=LR)
 scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 1.0, gamma=0.1)
 
-#define train and evalue
+#define train and evalue process
+print("----------- step 6: training the model...")
 def train(dataloader):
     model.train()
     total_acc, total_count = 0, 0
@@ -148,7 +155,7 @@ for epoch in range(1, EPOCHS + 1):
     )
     print("-" * 59)
 
-
-print("Checking the results of test dataset.")
+#testing the model
+print("----------- step 7: testing the model accuracy on test dataset....")
 accu_test = evaluate(test_dataloader)
 print("test accuracy {:8.3f}".format(accu_test))
