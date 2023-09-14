@@ -20,7 +20,7 @@ python main.py
 ```
 
 ## v2.0
-Intention classification using train/valid/test dataset, with torchtext library (tokenizer) and 2-layer model (embedding+fully connected layer)
+Intention classification using train/valid/test dataset, with torchtext library (tokenizer) and an embedding model (embedding+fully connected layer)
 - dataset/generate_snip_json.py: generate snips_train.json, snips_valid.json, snips_test.json files from SNIP dataset
 - data_util.py: defines the chat chataset iterator for the dataloader, tokenizer and vocabulary
 - model.py: 2-layer model, token embedding layer and fully connected layer
