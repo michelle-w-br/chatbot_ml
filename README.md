@@ -34,3 +34,6 @@ python generate_snip_json.py
 cd ..
 python train.py
 ```
+
+## v3.0_kb
+creat a customized knowledge base.
