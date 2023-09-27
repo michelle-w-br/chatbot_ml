@@ -7,8 +7,8 @@ class ChatDataset(Dataset):
     A single training/test example for simple intent classification.
 
     Args:
-        X: embedding vector for the sentence
-        Y: intent label index
+        X: pattern sentence
+        Y: intent label
     """
     def __init__(self, X, Y):
         self.n_samples = len(X)
