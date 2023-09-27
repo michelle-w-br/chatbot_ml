@@ -1,6 +1,6 @@
-# Chatbot intention classification in PyTorch.  
+# Custom Chatbot in Python.  
 
-## v1.0
+## v1.0: botpress/voiceflow intent with few data
 Classify simple intention patterns specified by users, with Bag-of-Words model and a simple layer neural network model
 - dataset: dataset/intents.json
 - data.py: defines the chat dataset iterator for the dataloader
@@ -19,7 +19,7 @@ This will save `chat_model.pth` file. And then run
 python main.py
 ```
 
-## v2.0
+## v2.0: botpress/voiceflow intent with more data
 Intention classification using train/valid/test dataset, with torchtext library (tokenizer) and an embedding model (embedding+fully connected layer)
 - dataset/generate_snip_json.py: generate snips_train.json, snips_valid.json, snips_test.json files from SNIP dataset
 - data_util.py: defines the chat chataset iterator for the dataloader, tokenizer and vocabulary
@@ -35,5 +35,5 @@ cd ..
 python train.py
 ```
 
-## v3.0_kb
+## v3.0_kb: : botpress/voiceflow knowledge base
 creat a customized knowledge base.
