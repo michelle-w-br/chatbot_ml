@@ -1,4 +1,4 @@
-# Custom Chatbot in Python.  
+# Custom Chatbot in Python
 
 ## v1.0: botpress/voiceflow intent with few data
 Classify simple intention patterns specified by users, with Bag-of-Words model and a simple layer neural network model
@@ -37,3 +37,14 @@ python train.py
 
 ## v3.0_kb: : botpress/voiceflow knowledge base
 creat a customized knowledge base.
+### Usage
+Run
+```console
+pip install llama_index
+pip install openai
+python chatpdf.py
+
+pip install llama_hub
+pip install youtube_transcript_api
+python chat_video
+```

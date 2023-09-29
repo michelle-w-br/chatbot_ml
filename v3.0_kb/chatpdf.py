@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from qa_llamaindex import get_response
+from qa_pdf import get_response
 
 app = Flask(__name__)
 
@@ -11,10 +11,7 @@ def index_get():
 def predict():
     text=request.get_json().get("message")
     response=get_response(text)
-    
-    print(response.response)
     message={"answer":response.response}
-    print(message)
     return jsonify(message)
 
 if __name__=="__main__":
