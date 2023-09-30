@@ -33,7 +33,7 @@ body {
     flex-direction: column;
     background: #eee;
     width: 300px;
-    height: 350px;
+    height: 750px;
     z-index: -123456;
     opacity: 0;
     transition: all .5s ease-in-out;
@@ -98,7 +98,7 @@ body {
 
 .chatbox__support {
     background: #f9f9f9;
-    height: 450px;
+    height: 750px;
     width: 350px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 20px;
