@@ -1,4 +1,5 @@
 # Custom Chatbot in Python
+medium: https://medium.com/@bridgeriver-ai
 
 ## v1.0: botpress/voiceflow intent with few data
 Classify simple intention patterns specified by users, with Bag-of-Words model and a simple layer neural network model
@@ -19,6 +20,11 @@ This will save `chat_model.pth` file. And then run
 python main.py
 ```
 
+### Watch the Tutorial
+[![Alt text](http://i3.ytimg.com/vi/S-pse__T3qE/hqdefault.jpg)](https://youtu.be/S-pse__T3qE)  
+[https://youtu.be/S-pse__T3qE](https://youtu.be/S-pse__T3qE)
+
+
 ## v2.0: botpress/voiceflow intent with more data
 Intention classification using train/valid/test dataset, with torchtext library (tokenizer) and an embedding model (embedding+fully connected layer)
 - dataset/generate_snip_json.py: generate snips_train.json, snips_valid.json, snips_test.json files from SNIP dataset
@@ -35,8 +41,17 @@ cd ..
 python train.py
 ```
 
+
 ## v3.0_kb: : botpress/voiceflow knowledge base
-creat a customized knowledge base.
+creat a custom chatbot with your data, similar to knowledge base feature in Botpress/Voiceflow.
+- dataset/llama2.pdf: user data, can be any format supported by llama hub in llama-index
+- chatpdf.py: main file to start the chatbot server (query pdf)
+- qa_pdf.py: set up llama index for user data (pdf data)
+- chatvideo.py: main file to start the chatbot server (query youtube video transcript)
+- qa_video: set up llama index for user data (youtube video transcript data)
+- templates/home.html: home landing page for the server
+- static/app.js, static/style.css: front end code
+
 ### Usage
 Run
 ```console
@@ -48,3 +63,11 @@ pip install llama_hub
 pip install youtube_transcript_api
 python chat_video
 ```
+
+### frontend code credits:
+Frontend code credits go to:
+https://github.com/hitchcliff/front-end-chatjs
+
+### Watch the Tutorial
+[![Alt text](http://i3.ytimg.com/vi/cnpn_HDazY4/hqdefault.jpg)](https://youtu.be/cnpn_HDazY4)  
+[https://youtu.be/cnpn_HDazY4](https://youtu.be/cnpn_HDazY4)

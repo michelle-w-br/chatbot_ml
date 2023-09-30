@@ -4,9 +4,9 @@ from llama_index import VectorStoreIndex
 
 os.environ['OPENAI_API_KEY'] = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
+# step 1: upload data and build index
 loader = YoutubeTranscriptReader()
 documents = loader.load_data(ytlinks=['https://youtu.be/1ZwXkw9_Xq8'])
-
 index = VectorStoreIndex.from_documents(documents)
 
 # step2: setup the query engine
