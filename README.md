@@ -1,6 +1,6 @@
 # Custom Chatbot in Python
-medium: https://medium.com/@bridgeriver-ai
-youtube: https://www.youtube.com/@bridgeriver_ai
+- medium: https://medium.com/@bridgeriver-ai
+- youtube: https://www.youtube.com/@bridgeriver_ai
 
 ## v1.0: botpress/voiceflow intent with few data
 Classify simple intention patterns specified by users, with Bag-of-Words model and a simple layer neural network model
