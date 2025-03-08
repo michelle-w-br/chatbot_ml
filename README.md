@@ -1,5 +1,5 @@
 # AI customer support saas:
-https://www.lemchat.com/
+Lemchat: https://www.lemchat.com/
 
 # Custom Chatbot in Python
 - medium: https://medium.com/@bridgeriver-ai
