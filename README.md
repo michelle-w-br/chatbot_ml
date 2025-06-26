@@ -1,6 +1,6 @@
 # official AI customer support saas:
-Lemchat: https://www.lemchat.com/
-product hunt launch: https://www.producthunt.com/products/lemchat?launch=lemchat
+- Lemchat: https://www.lemchat.com/
+- product hunt launch: https://www.producthunt.com/products/lemchat?launch=lemchat
 
 # Custom Chatbot in Python
 - medium: https://medium.com/@bridgeriver-ai
